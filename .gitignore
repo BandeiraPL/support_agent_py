@@ -1,19 +1,16 @@
-# 🔒 Ignorar variáveis de ambiente
+# Ignorar arquivos de ambiente
 .env
 
-# 🐍 Ignorar cache e metadados do Python
+# Ignorar cache e metadados do Python
 __pycache__/
 *.pyc
 
-# 🧠 Manter o FAISS index no repositório (REMOVIDO o 'vectordb/')
-# Ignorar apenas dados brutos locais, se existirem
-data/
-
-# 🚫 Ignorar ambiente virtual
+# Ignorar ambiente virtual
 venv/
 
-# 🧰 Ignorar arquivos temporários do sistema e do editor
-.DS_Store
-*.log
-.idea/
-.vscode/
+# Ignorar dados locais, exceto o índice FAISS
+data/
+vectordb/*
+!vectordb/faiss_index/
+!vectordb/faiss_index/*
+
